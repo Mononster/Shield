@@ -128,7 +128,7 @@ public extension Certificate {
                      notBefore: notBefore, notAfter: notAfter, extensions: extensions)
     }
 
-    public func subjectAlternativeNames(names: GeneralName...) throws -> Builder {
+    public func subjectAlternativeNames(names: GeneralName) throws -> Builder {
 
       var extensions = self.extensions ?? Extensions()
       try extensions.replace(value: SubjectAltName(names: names))
